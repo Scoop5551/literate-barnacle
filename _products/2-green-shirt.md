@@ -1,7 +1,9 @@
 ---
 # Jekyll variables
 title: Green Shirt
-slug: shirts/green-shirt-1
+slug: green-shirt-1
+categories:
+    - shirts
 
 # Custom variables
 ds_position_homepage: 1

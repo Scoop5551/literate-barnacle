@@ -8,8 +8,8 @@ permalink: /
     <div class="col-md-4">
         <a href="{{ category.url }}" class="category-link">
             <figure class="category-thumb">
-                {% assign category_img_src = "/assets/images/categories/" | append: category.slug | append: ".jpg" %}
-                <img src="{{ category_img_src }}" class="w-50" alt="{{ category.title }}">
+                {% assign category_img_src = "assets/images/categories/" | append: category.slug | append: ".jpg" %}
+                <img src="{{ site.baseurl }}{{ category_img_src }}" class="w-50" alt="{{ category.title }}">
             </figure>
             <div class="cat-box">
                 <h4 class="category-name">{{ category.title }}</h4>

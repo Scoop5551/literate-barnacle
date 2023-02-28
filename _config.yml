@@ -58,7 +58,7 @@ defaults:
       path: _products
     values:
       layout: product
-      permalink: /products/:slug
+      permalink: /products/:slugified_categories/:slug
   -
     scope:
       type: categories

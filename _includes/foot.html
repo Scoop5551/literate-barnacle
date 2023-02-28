@@ -1,0 +1,19 @@
+<script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+<script async src="/assets/scripts/bootstrap.js"></script>
+<script async src="https://cse.google.com/cse.js?cx=60a53b1003d48c915"></script>
+<script src="/assets/scripts/tarteaucitron/tarteaucitron.js"></script>
+<script src="/assets/scripts/main.js"></script>
+
+<div hidden id="snipcart" data-api-key="MDkzN2VjMDctM2Q2MS00YWUwLThkNDQtOGExZmVhZGMxODU5NjM3NTgxNzQ3MDgxNDQ0NDEy"></div>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

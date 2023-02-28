@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Categories
+  menu:
+    - name: Shirts
+      link: /products/shirts
+    - name: Jeans
+      link: /products/jeans
+- name: Blog
+  link: /blog

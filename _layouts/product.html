@@ -1,0 +1,37 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% include head.html %}
+</head>
+<body>
+<div class="container-fluid">
+    {% include nav.html %}
+    <main class="page-content">
+        {{ content }}
+
+		{% assign product_images = site.static_files | where: "image", true %}
+		{% for product_image in product_images %}
+		{% assign product_image_data = product_image.basename | split: "." %}
+		{{ product_image_data | inspect }}
+		{% if product_image_data[0] == page.snipcart_item_id %}
+		{{ product_image.path }}
+		{% endif %}
+		{% endfor %}
+		
+		<button class="snipcart-add-item"
+		  data-item-id="{{ page.snipcart_item_id }}"
+		  data-item-price="{{ page.snipcart_item_price }}"
+		  data-item-url="{{ page.url }}"
+		  data-item-description="{{ page.snipcart_item_description }}"
+		  data-item-image="{{ page.snipcart_item_image }}"
+		  data-item-name="{{ page.title }}">
+		  Add to cart
+		</button>
+    </main>
+    {% include foot.html %}
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% include head.html %}
+</head>
+<body>
+<div class="container-fluid">
+    {% include nav.html %}
+    <main class="page-content">
+        {{ content }}
+
+		{% for product in site.products %}
+		{% if product.ds_category contains page.slug %}
+		<h2>{{ product.snipcart_item_id }} - {{ product.snipcart_item_price }}</h1>
+		<h2>
+			<a href="{{ product.url }}">{{ product.title }}</a>
+		</h2>
+		<p>{{ product.content | markdownify }}</p>
+		{% endif %}
+		{% endfor %}
+    </main>
+    {% include foot.html %}
+</div>
+</body>
+</html>
